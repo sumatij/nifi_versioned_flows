@@ -1,4 +1,5 @@
 flows:
+  1c2bf686-7b3a-492e-a076-1285c02bd87d: {ver: 1, file: Avro_to_Bigquery.snapshot}
   74354c4d-a915-4a1a-ba32-2eac4fd718df: {ver: 1, file: Test_Flow_Internet.snapshot}
   25ca6474-8194-40ad-8ede-01ff724e2dc4: {ver: 1, file: Test_github.snapshot}
   99d41564-b3fc-418a-8d68-4751263c7bfb: {ver: 1, file: ELK_To_BigQuery.snapshot}
