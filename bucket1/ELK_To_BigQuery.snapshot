@@ -3,59 +3,23 @@
     "dataModelVersion" : "2"
   },
   "content" : {
-    "comments" : "It is fetching data from the elastic search and putting into the Google Bigquery",
+    "comments" : "",
     "componentType" : "PROCESS_GROUP",
     "connections" : [ {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ {
-        "x" : 1433.4825641852303,
-        "y" : -298.7690848976695
-      }, {
-        "x" : 1433.4825641852303,
-        "y" : -248.76908489766947
-      } ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "1a9b5b1a-d27f-3add-b2ac-7fd161746c22",
-        "name" : "FetchElasticsearchHttp",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "73cd5854-0ab6-3bed-a711-6b458624cfc2",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure", "not found", "retry" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "1a9b5b1a-d27f-3add-b2ac-7fd161746c22",
-        "name" : "FetchElasticsearchHttp",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
         "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "c9b4717d-29e0-3780-93c6-df6b3ebe9b40",
-        "name" : "InferAvroSchema",
+        "groupId" : "35be815b-0ccb-38f0-8357-d52474221afc",
+        "id" : "868cd718-d145-3eb1-88a7-f23cf0922a87",
+        "name" : "PutBigQueryBatch",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "1e5f69d6-3de4-3fd3-84d5-bd766d044e2c",
+      "groupIdentifier" : "35be815b-0ccb-38f0-8357-d52474221afc",
+      "identifier" : "4484042a-e289-3216-a412-7b4d2219de14",
       "labelIndex" : 1,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -65,314 +29,28 @@
       "selectedRelationships" : [ "failure", "success", "not found", "retry" ],
       "source" : {
         "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "db5cac14-b735-3b1d-bb0e-a588dc3d4300",
+        "groupId" : "35be815b-0ccb-38f0-8357-d52474221afc",
+        "id" : "a4889858-5d8e-3e00-977a-b35dcdade426",
         "name" : "FetchElasticsearchHttp",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "05b74b59-ab07-3a4a-8388-d4c30ddcf4d5",
-        "name" : "PutBigQueryBatch",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "544cc1b2-8346-3a5f-8ee7-de3269bb3960",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "1a9b5b1a-d27f-3add-b2ac-7fd161746c22",
-        "name" : "FetchElasticsearchHttp",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "69265077-6205-3a0c-9657-5ae8125d1575",
-        "name" : "PutBigQueryBatch",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "c2d11a86-196a-3713-9c23-4c7dfa428b43",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "original", "unsupported content", "failure", "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "c9b4717d-29e0-3780-93c6-df6b3ebe9b40",
-        "name" : "InferAvroSchema",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "fe9f5527-14b0-3252-b0d1-f03bd5ba1ba0",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "d2d81c3c-f188-3a98-a797-c4b5ad5a966e",
-      "labelIndex" : 1,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure", "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-        "id" : "05b74b59-ab07-3a4a-8388-d4c30ddcf4d5",
-        "name" : "PutBigQueryBatch",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
     } ],
-    "controllerServices" : [ {
-      "bundle" : {
-        "artifact" : "nifi-record-serialization-services-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "CONTROLLER_SERVICE",
-      "controllerServiceApis" : [ {
-        "bundle" : {
-          "artifact" : "nifi-standard-services-api-nar",
-          "group" : "org.apache.nifi",
-          "version" : "1.9.1"
-        },
-        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
-      } ],
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "0396d913-f771-3b64-a3dc-96e0fcaf842e",
-      "name" : "AvroReader",
-      "properties" : {
-        "schema-name" : "${schema.name}",
-        "cache-size" : "1000",
-        "schema-access-strategy" : "embedded-avro-schema",
-        "schema-text" : "${avro.schema}"
-      },
-      "propertyDescriptors" : {
-        "schema-branch" : {
-          "displayName" : "Schema Branch",
-          "identifiesControllerService" : false,
-          "name" : "schema-branch",
-          "sensitive" : false
-        },
-        "schema-name" : {
-          "displayName" : "Schema Name",
-          "identifiesControllerService" : false,
-          "name" : "schema-name",
-          "sensitive" : false
-        },
-        "cache-size" : {
-          "displayName" : "Cache Size",
-          "identifiesControllerService" : false,
-          "name" : "cache-size",
-          "sensitive" : false
-        },
-        "schema-registry" : {
-          "displayName" : "Schema Registry",
-          "identifiesControllerService" : true,
-          "name" : "schema-registry",
-          "sensitive" : false
-        },
-        "schema-access-strategy" : {
-          "displayName" : "Schema Access Strategy",
-          "identifiesControllerService" : false,
-          "name" : "schema-access-strategy",
-          "sensitive" : false
-        },
-        "schema-version" : {
-          "displayName" : "Schema Version",
-          "identifiesControllerService" : false,
-          "name" : "schema-version",
-          "sensitive" : false
-        },
-        "schema-text" : {
-          "displayName" : "Schema Text",
-          "identifiesControllerService" : false,
-          "name" : "schema-text",
-          "sensitive" : false
-        }
-      },
-      "type" : "org.apache.nifi.avro.AvroReader"
-    } ],
+    "controllerServices" : [ ],
     "funnels" : [ ],
-    "identifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
+    "identifier" : "35be815b-0ccb-38f0-8357-d52474221afc",
     "inputPorts" : [ ],
     "labels" : [ ],
-    "name" : "Put_Big_Query",
+    "name" : "Elasticsearch_Bigquery",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 10002.9833984375,
-      "y" : -2199.258544921875
+      "x" : 10962.25000234808,
+      "y" : -1954.8788851088439
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-elasticsearch-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "db5cac14-b735-3b1d-bb0e-a588dc3d4300",
-      "name" : "FetchElasticsearchHttp",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 357.02551166823514,
-        "y" : 33.31621719219888
-      },
-      "properties" : {
-        "elasticsearch-http-response-timeout" : "15 secs",
-        "fetch-es-doc-id" : "RwkKsWoB9EOO0EDmVnP4",
-        "fetch-es-index" : "name",
-        "elasticsearch-http-url" : "http://localhost:9200/",
-        "fetch-es-type" : "details",
-        "elasticsearch-http-connect-timeout" : "5 secs"
-      },
-      "propertyDescriptors" : {
-        "elasticsearch-http-response-timeout" : {
-          "displayName" : "Response Timeout",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-response-timeout",
-          "sensitive" : false
-        },
-        "fetch-es-doc-id" : {
-          "displayName" : "Document Identifier",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-doc-id",
-          "sensitive" : false
-        },
-        "fetch-es-index" : {
-          "displayName" : "Index",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-index",
-          "sensitive" : false
-        },
-        "proxy-configuration-service" : {
-          "displayName" : "Proxy Configuration Service",
-          "identifiesControllerService" : true,
-          "name" : "proxy-configuration-service",
-          "sensitive" : false
-        },
-        "elasticsearch-http-url" : {
-          "displayName" : "Elasticsearch URL",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-url",
-          "sensitive" : false
-        },
-        "fetch-es-fields" : {
-          "displayName" : "Fields",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-fields",
-          "sensitive" : false
-        },
-        "fetch-es-type" : {
-          "displayName" : "Type",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-type",
-          "sensitive" : false
-        },
-        "SSL Context Service" : {
-          "displayName" : "SSL Context Service",
-          "identifiesControllerService" : true,
-          "name" : "SSL Context Service",
-          "sensitive" : false
-        },
-        "elasticsearch-http-connect-timeout" : {
-          "displayName" : "Connection Timeout",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-connect-timeout",
-          "sensitive" : false
-        },
-        "Username" : {
-          "displayName" : "Username",
-          "identifiesControllerService" : false,
-          "name" : "Username",
-          "sensitive" : false
-        },
-        "elasticsearch-http-proxy-host" : {
-          "displayName" : "Proxy Host",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-proxy-host",
-          "sensitive" : false
-        },
-        "proxy-username" : {
-          "displayName" : "Proxy Username",
-          "identifiesControllerService" : false,
-          "name" : "proxy-username",
-          "sensitive" : false
-        },
-        "proxy-password" : {
-          "displayName" : "Proxy Password",
-          "identifiesControllerService" : false,
-          "name" : "proxy-password",
-          "sensitive" : false
-        },
-        "elasticsearch-http-proxy-port" : {
-          "displayName" : "Proxy Port",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-proxy-port",
-          "sensitive" : false
-        },
-        "Password" : {
-          "displayName" : "Password",
-          "identifiesControllerService" : false,
-          "name" : "Password",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.elasticsearch.FetchElasticsearchHttp",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "bulletinLevel" : "DEBUG",
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "bulletinLevel" : "INFO",
       "bundle" : {
         "artifact" : "nifi-gcp-nar",
         "group" : "org.apache.nifi",
@@ -381,14 +59,14 @@
       "comments" : "",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "05b74b59-ab07-3a4a-8388-d4c30ddcf4d5",
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "35be815b-0ccb-38f0-8357-d52474221afc",
+      "identifier" : "868cd718-d145-3eb1-88a7-f23cf0922a87",
       "name" : "PutBigQueryBatch",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 928.1228276674419,
-        "y" : -75.10348841366704
+        "x" : 387.16598161036063,
+        "y" : 236.47710734979034
       },
       "properties" : {
         "bq.readtimeout" : "5 minutes",
@@ -398,8 +76,8 @@
         "bq.csv.allow.quoted.new.lines" : "false",
         "gcp-retry-count" : "6",
         "bq.csv.quote" : "\"",
-        "bq.table.schema" : "[\n{\n\"name\":\"firstName\",\n\"type\":\"string\"\n},\n{\n\"name\":\"lastName\",\n\"type\":\"string\"\n  \n},\n{\n\"name\":\"age\",\n\"type\":\"integer\"  \n}\n]",
-        "bq.load.ignore_unknown" : "false",
+        "bq.table.schema" : "[\n  {\n    \"mode\": \"NULLABLE\",\n    \"name\": \"firstName\",\n    \"type\": \"STRING\"\n  },\n  {\n    \"mode\": \"NULLABLE\",\n    \"name\": \"lastName\",\n    \"type\": \"STRING\"\n  },\n  {\n    \"mode\": \"NULLABLE\",\n    \"name\": \"age\",\n    \"type\": \"INTEGER\"\n  }\n]",
+        "bq.load.ignore_unknown" : "true",
         "gcp-project-id" : "iron-cycle-236720",
         "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
         "bq.load.max_badrecords" : "20",
@@ -408,513 +86,6 @@
         "bq.csv.allow.jagged.rows" : "false",
         "bq.dataset" : "Names",
         "bq.load.write_disposition" : "WRITE_TRUNCATE",
-        "bq.load.create_disposition" : "CREATE_NEVER"
-      },
-      "propertyDescriptors" : {
-        "bq.readtimeout" : {
-          "displayName" : "Read Timeout",
-          "identifiesControllerService" : false,
-          "name" : "bq.readtimeout",
-          "sensitive" : false
-        },
-        "gcp-proxy-host" : {
-          "displayName" : "Proxy host",
-          "identifiesControllerService" : false,
-          "name" : "gcp-proxy-host",
-          "sensitive" : false
-        },
-        "bq.table.name" : {
-          "displayName" : "Table Name",
-          "identifiesControllerService" : false,
-          "name" : "bq.table.name",
-          "sensitive" : false
-        },
-        "bq.csv.charset" : {
-          "displayName" : "CSV Input - Character Set",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.charset",
-          "sensitive" : false
-        },
-        "bq.load.type" : {
-          "displayName" : "Load file type",
-          "identifiesControllerService" : false,
-          "name" : "bq.load.type",
-          "sensitive" : false
-        },
-        "bq.csv.allow.quoted.new.lines" : {
-          "displayName" : "CSV Input - Allow Quoted New Lines",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.allow.quoted.new.lines",
-          "sensitive" : false
-        },
-        "gcp-retry-count" : {
-          "displayName" : "Number of retries",
-          "identifiesControllerService" : false,
-          "name" : "gcp-retry-count",
-          "sensitive" : false
-        },
-        "proxy-configuration-service" : {
-          "displayName" : "Proxy Configuration Service",
-          "identifiesControllerService" : true,
-          "name" : "proxy-configuration-service",
-          "sensitive" : false
-        },
-        "bq.csv.quote" : {
-          "displayName" : "CSV Input - Quote",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.quote",
-          "sensitive" : false
-        },
-        "bq.table.schema" : {
-          "displayName" : "Table Schema",
-          "identifiesControllerService" : false,
-          "name" : "bq.table.schema",
-          "sensitive" : false
-        },
-        "gcp-proxy-user-name" : {
-          "displayName" : "HTTP Proxy Username",
-          "identifiesControllerService" : false,
-          "name" : "gcp-proxy-user-name",
-          "sensitive" : false
-        },
-        "bq.load.ignore_unknown" : {
-          "displayName" : "Ignore Unknown Values",
-          "identifiesControllerService" : false,
-          "name" : "bq.load.ignore_unknown",
-          "sensitive" : false
-        },
-        "gcp-project-id" : {
-          "displayName" : "Project ID",
-          "identifiesControllerService" : false,
-          "name" : "gcp-project-id",
-          "sensitive" : false
-        },
-        "GCP Credentials Provider Service" : {
-          "displayName" : "GCP Credentials Provider Service",
-          "identifiesControllerService" : true,
-          "name" : "GCP Credentials Provider Service",
-          "sensitive" : false
-        },
-        "bq.load.max_badrecords" : {
-          "displayName" : "Max Bad Records",
-          "identifiesControllerService" : false,
-          "name" : "bq.load.max_badrecords",
-          "sensitive" : false
-        },
-        "bq.csv.delimiter" : {
-          "displayName" : "CSV Input - Field Delimiter",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.delimiter",
-          "sensitive" : false
-        },
-        "bq.csv.skip.leading.rows" : {
-          "displayName" : "CSV Input - Skip Leading Rows",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.skip.leading.rows",
-          "sensitive" : false
-        },
-        "gcp-proxy-user-password" : {
-          "displayName" : "HTTP Proxy Password",
-          "identifiesControllerService" : false,
-          "name" : "gcp-proxy-user-password",
-          "sensitive" : false
-        },
-        "bq.csv.allow.jagged.rows" : {
-          "displayName" : "CSV Input - Allow Jagged Rows",
-          "identifiesControllerService" : false,
-          "name" : "bq.csv.allow.jagged.rows",
-          "sensitive" : false
-        },
-        "bq.dataset" : {
-          "displayName" : "Dataset",
-          "identifiesControllerService" : false,
-          "name" : "bq.dataset",
-          "sensitive" : false
-        },
-        "bq.load.write_disposition" : {
-          "displayName" : "Write Disposition",
-          "identifiesControllerService" : false,
-          "name" : "bq.load.write_disposition",
-          "sensitive" : false
-        },
-        "gcp-proxy-port" : {
-          "displayName" : "Proxy port",
-          "identifiesControllerService" : false,
-          "name" : "gcp-proxy-port",
-          "sensitive" : false
-        },
-        "bq.load.create_disposition" : {
-          "displayName" : "Create Disposition",
-          "identifiesControllerService" : false,
-          "name" : "bq.load.create_disposition",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.gcp.bigquery.PutBigQueryBatch",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "fe9f5527-14b0-3252-b0d1-f03bd5ba1ba0",
-      "name" : "LogAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 1066.1231938607532,
-        "y" : 224.4728976950684
-      },
-      "properties" : {
-        "character-set" : "windows-1252",
-        "Log Level" : "info",
-        "attributes-to-log-regex" : ".*",
-        "Log Payload" : "true"
-      },
-      "propertyDescriptors" : {
-        "Log prefix" : {
-          "displayName" : "Log prefix",
-          "identifiesControllerService" : false,
-          "name" : "Log prefix",
-          "sensitive" : false
-        },
-        "character-set" : {
-          "displayName" : "Character Set",
-          "identifiesControllerService" : false,
-          "name" : "character-set",
-          "sensitive" : false
-        },
-        "Log Level" : {
-          "displayName" : "Log Level",
-          "identifiesControllerService" : false,
-          "name" : "Log Level",
-          "sensitive" : false
-        },
-        "attributes-to-ignore-regex" : {
-          "displayName" : "Attributes to Ignore by Regular Expression",
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-ignore-regex",
-          "sensitive" : false
-        },
-        "Attributes to Ignore" : {
-          "displayName" : "Attributes to Ignore",
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore",
-          "sensitive" : false
-        },
-        "Attributes to Log" : {
-          "displayName" : "Attributes to Log",
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Log",
-          "sensitive" : false
-        },
-        "attributes-to-log-regex" : {
-          "displayName" : "Attributes to Log by Regular Expression",
-          "identifiesControllerService" : false,
-          "name" : "attributes-to-log-regex",
-          "sensitive" : false
-        },
-        "Log Payload" : {
-          "displayName" : "Log Payload",
-          "identifiesControllerService" : false,
-          "name" : "Log Payload",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-elasticsearch-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "1a9b5b1a-d27f-3add-b2ac-7fd161746c22",
-      "name" : "FetchElasticsearchHttp",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 970.4825641852303,
-        "y" : -338.7690848976695
-      },
-      "properties" : {
-        "elasticsearch-http-response-timeout" : "15 secs",
-        "fetch-es-doc-id" : "RwkKsWoB9EOO0EDmVnP4",
-        "fetch-es-index" : "name",
-        "elasticsearch-http-url" : "http://localhost:9200/",
-        "fetch-es-type" : "details",
-        "elasticsearch-http-connect-timeout" : "5 secs"
-      },
-      "propertyDescriptors" : {
-        "elasticsearch-http-response-timeout" : {
-          "displayName" : "Response Timeout",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-response-timeout",
-          "sensitive" : false
-        },
-        "fetch-es-doc-id" : {
-          "displayName" : "Document Identifier",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-doc-id",
-          "sensitive" : false
-        },
-        "fetch-es-index" : {
-          "displayName" : "Index",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-index",
-          "sensitive" : false
-        },
-        "proxy-configuration-service" : {
-          "displayName" : "Proxy Configuration Service",
-          "identifiesControllerService" : true,
-          "name" : "proxy-configuration-service",
-          "sensitive" : false
-        },
-        "elasticsearch-http-url" : {
-          "displayName" : "Elasticsearch URL",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-url",
-          "sensitive" : false
-        },
-        "fetch-es-fields" : {
-          "displayName" : "Fields",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-fields",
-          "sensitive" : false
-        },
-        "fetch-es-type" : {
-          "displayName" : "Type",
-          "identifiesControllerService" : false,
-          "name" : "fetch-es-type",
-          "sensitive" : false
-        },
-        "SSL Context Service" : {
-          "displayName" : "SSL Context Service",
-          "identifiesControllerService" : true,
-          "name" : "SSL Context Service",
-          "sensitive" : false
-        },
-        "elasticsearch-http-connect-timeout" : {
-          "displayName" : "Connection Timeout",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-connect-timeout",
-          "sensitive" : false
-        },
-        "Username" : {
-          "displayName" : "Username",
-          "identifiesControllerService" : false,
-          "name" : "Username",
-          "sensitive" : false
-        },
-        "elasticsearch-http-proxy-host" : {
-          "displayName" : "Proxy Host",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-proxy-host",
-          "sensitive" : false
-        },
-        "proxy-username" : {
-          "displayName" : "Proxy Username",
-          "identifiesControllerService" : false,
-          "name" : "proxy-username",
-          "sensitive" : false
-        },
-        "proxy-password" : {
-          "displayName" : "Proxy Password",
-          "identifiesControllerService" : false,
-          "name" : "proxy-password",
-          "sensitive" : false
-        },
-        "elasticsearch-http-proxy-port" : {
-          "displayName" : "Proxy Port",
-          "identifiesControllerService" : false,
-          "name" : "elasticsearch-http-proxy-port",
-          "sensitive" : false
-        },
-        "Password" : {
-          "displayName" : "Password",
-          "identifiesControllerService" : false,
-          "name" : "Password",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.elasticsearch.FetchElasticsearchHttp",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-kite-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "c9b4717d-29e0-3780-93c6-df6b3ebe9b40",
-      "name" : "InferAvroSchema",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 455.4141199075809,
-        "y" : 499.132277076048
-      },
-      "properties" : {
-        "Schema Output Destination" : "flowfile-attribute",
-        "Get CSV Header Definition From Data" : "false",
-        "Avro Record Name" : "test",
-        "Charset" : "UTF-8",
-        "CSV Header Line Skip Count" : "0",
-        "CSV delimiter" : ",",
-        "CSV Escape String" : "\\",
-        "Input Content Type" : "use mime.type value",
-        "Pretty Avro Output" : "true",
-        "CSV Quote String" : "'",
-        "Number Of Records To Analyze" : "1000"
-      },
-      "propertyDescriptors" : {
-        "Schema Output Destination" : {
-          "displayName" : "Schema Output Destination",
-          "identifiesControllerService" : false,
-          "name" : "Schema Output Destination",
-          "sensitive" : false
-        },
-        "Get CSV Header Definition From Data" : {
-          "displayName" : "Get CSV Header Definition From Data",
-          "identifiesControllerService" : false,
-          "name" : "Get CSV Header Definition From Data",
-          "sensitive" : false
-        },
-        "Avro Record Name" : {
-          "displayName" : "Avro Record Name",
-          "identifiesControllerService" : false,
-          "name" : "Avro Record Name",
-          "sensitive" : false
-        },
-        "Charset" : {
-          "displayName" : "Charset",
-          "identifiesControllerService" : false,
-          "name" : "Charset",
-          "sensitive" : false
-        },
-        "CSV Header Line Skip Count" : {
-          "displayName" : "CSV Header Line Skip Count",
-          "identifiesControllerService" : false,
-          "name" : "CSV Header Line Skip Count",
-          "sensitive" : false
-        },
-        "CSV delimiter" : {
-          "displayName" : "CSV delimiter",
-          "identifiesControllerService" : false,
-          "name" : "CSV delimiter",
-          "sensitive" : false
-        },
-        "CSV Escape String" : {
-          "displayName" : "CSV Escape String",
-          "identifiesControllerService" : false,
-          "name" : "CSV Escape String",
-          "sensitive" : false
-        },
-        "CSV Header Definition" : {
-          "displayName" : "CSV Header Definition",
-          "identifiesControllerService" : false,
-          "name" : "CSV Header Definition",
-          "sensitive" : false
-        },
-        "Input Content Type" : {
-          "displayName" : "Input Content Type",
-          "identifiesControllerService" : false,
-          "name" : "Input Content Type",
-          "sensitive" : false
-        },
-        "Pretty Avro Output" : {
-          "displayName" : "Pretty Avro Output",
-          "identifiesControllerService" : false,
-          "name" : "Pretty Avro Output",
-          "sensitive" : false
-        },
-        "CSV Quote String" : {
-          "displayName" : "CSV Quote String",
-          "identifiesControllerService" : false,
-          "name" : "CSV Quote String",
-          "sensitive" : false
-        },
-        "Number Of Records To Analyze" : {
-          "displayName" : "Number Of Records To Analyze",
-          "identifiesControllerService" : false,
-          "name" : "Number Of Records To Analyze",
-          "sensitive" : false
-        }
-      },
-      "runDurationMillis" : 0,
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.kite.InferAvroSchema",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success", "failure" ],
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-gcp-nar",
-        "group" : "org.apache.nifi",
-        "version" : "1.9.1"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "fabcc9c6-c3a3-3e4c-a614-f0d1484f8f6a",
-      "identifier" : "69265077-6205-3a0c-9657-5ae8125d1575",
-      "name" : "PutBigQueryBatch",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 489.630126953125,
-        "y" : 813.7576293945312
-      },
-      "properties" : {
-        "bq.readtimeout" : "5 minutes",
-        "bq.table.name" : "Details",
-        "bq.csv.charset" : "UTF-8",
-        "bq.load.type" : "AVRO",
-        "bq.csv.allow.quoted.new.lines" : "false",
-        "gcp-retry-count" : "6",
-        "bq.csv.quote" : "\"",
-        "bq.table.schema" : "C:\\Sumati\\NiFi_Source\\Schema",
-        "bq.load.ignore_unknown" : "false",
-        "gcp-project-id" : "iron-cycle-236720",
-        "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
-        "bq.load.max_badrecords" : "10",
-        "bq.csv.delimiter" : ",",
-        "bq.csv.skip.leading.rows" : "0",
-        "bq.csv.allow.jagged.rows" : "false",
-        "bq.dataset" : "Names",
-        "bq.load.write_disposition" : "WRITE_EMPTY",
         "bq.load.create_disposition" : "CREATE_IF_NEEDED"
       },
       "propertyDescriptors" : {
@@ -1062,6 +233,132 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.gcp.bigquery.PutBigQueryBatch",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "35be815b-0ccb-38f0-8357-d52474221afc",
+      "identifier" : "a4889858-5d8e-3e00-977a-b35dcdade426",
+      "name" : "FetchElasticsearchHttp",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 343.9993187537275,
+        "y" : -1.999645792359388
+      },
+      "properties" : {
+        "elasticsearch-http-response-timeout" : "15 secs",
+        "fetch-es-doc-id" : "RwkKsWoB9EOO0EDmVnP4",
+        "fetch-es-index" : "name",
+        "elasticsearch-http-url" : "http://localhost:9200/",
+        "fetch-es-type" : "details",
+        "elasticsearch-http-connect-timeout" : "5 secs"
+      },
+      "propertyDescriptors" : {
+        "elasticsearch-http-response-timeout" : {
+          "displayName" : "Response Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-response-timeout",
+          "sensitive" : false
+        },
+        "fetch-es-doc-id" : {
+          "displayName" : "Document Identifier",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-doc-id",
+          "sensitive" : false
+        },
+        "fetch-es-index" : {
+          "displayName" : "Index",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-index",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-url" : {
+          "displayName" : "Elasticsearch URL",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-url",
+          "sensitive" : false
+        },
+        "fetch-es-fields" : {
+          "displayName" : "Fields",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-fields",
+          "sensitive" : false
+        },
+        "fetch-es-type" : {
+          "displayName" : "Type",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-type",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-connect-timeout" : {
+          "displayName" : "Connection Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-connect-timeout",
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-host" : {
+          "displayName" : "Proxy Host",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-host",
+          "sensitive" : false
+        },
+        "proxy-username" : {
+          "displayName" : "Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "proxy-username",
+          "sensitive" : false
+        },
+        "proxy-password" : {
+          "displayName" : "Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "proxy-password",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-port" : {
+          "displayName" : "Proxy Port",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-port",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.elasticsearch.FetchElasticsearchHttp",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
