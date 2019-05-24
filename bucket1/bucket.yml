@@ -7,6 +7,7 @@ flows:
   74354c4d-a915-4a1a-ba32-2eac4fd718df: {ver: 1, file: Test_Flow_Internet.snapshot}
   25ca6474-8194-40ad-8ede-01ff724e2dc4: {ver: 1, file: Test_github.snapshot}
   99d41564-b3fc-418a-8d68-4751263c7bfb: {ver: 1, file: ELK_To_BigQuery.snapshot}
+  08f26311-0666-43a3-8bbe-af5021faa24d: {ver: 1, file: ELK_to_GCS.snapshot}
   2b568ef1-e725-42d7-894d-2a638366f9d2: {ver: 1, file: ELK_to_Bigquery.snapshot}
 layoutVer: 1
 bucketId: 103f79b7-8419-4097-8721-f670a228fa01
