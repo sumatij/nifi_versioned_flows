@@ -1,0 +1,1991 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "2b53ed57-4f12-3ad2-8efb-737c745e5d98",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Test_internet",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 10496.9833984375,
+      "y" : -2182.258544921875
+    },
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "5a5f22f5-67b8-33b8-acd1-c5f47a01ac2e",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "3f4e47a1-0fc4-3c4c-bd21-6b0944641b74",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "f4e30a2b-3f65-3627-af13-d7ee70c09761",
+          "name" : "InferAvroSchema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "f4e30a2b-3f65-3627-af13-d7ee70c09761",
+          "name" : "InferAvroSchema",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "7bb5b0d0-111f-386c-98da-eea2a85dc66d",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "fb3849fd-073b-3dd8-b6ed-774763393460",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "f4e30a2b-3f65-3627-af13-d7ee70c09761",
+          "name" : "InferAvroSchema",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "6e9dcb78-a7ec-3134-9186-5883408527e9",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "5c67d312-e80c-3ac5-9709-93fb7cf00f0c",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "d2825e2e-cc3e-3199-8c25-74ea0f35cffe",
+          "name" : "PutFile",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "19f4eb0f-6780-3468-80e0-e0f9bd45e3cb",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+          "id" : "5a5f22f5-67b8-33b8-acd1-c5f47a01ac2e",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      } ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "2b53ed57-4f12-3ad2-8efb-737c745e5d98",
+      "identifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "Multipel Streams Infer Schema",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : -18.266528789177073,
+        "y" : 355.8784823943952
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ "success", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "d2825e2e-cc3e-3199-8c25-74ea0f35cffe",
+        "name" : "PutFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 911.0,
+          "y" : 1103.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "./data/out/avro",
+          "Conflict Resolution Strategy" : "fail"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "5c67d312-e80c-3ac5-9709-93fb7cf00f0c",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 1195.0,
+          "y" : 429.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "incompatible", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kite-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "5a5f22f5-67b8-33b8-acd1-c5f47a01ac2e",
+        "name" : "ConvertCSVToAvro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 913.0,
+          "y" : 883.0
+        },
+        "properties" : {
+          "CSV quote character" : "\"",
+          "Use CSV header line" : "false",
+          "CSV charset" : "utf8",
+          "Lines to skip" : "0",
+          "CSV delimiter" : ",",
+          "kite-compression-type" : "SNAPPY",
+          "CSV escape character" : "\\",
+          "Record schema" : "${inferred.avro.schema}"
+        },
+        "propertyDescriptors" : {
+          "CSV quote character" : {
+            "displayName" : "CSV quote character",
+            "identifiesControllerService" : false,
+            "name" : "CSV quote character",
+            "sensitive" : false
+          },
+          "Use CSV header line" : {
+            "displayName" : "Use CSV header line",
+            "identifiesControllerService" : false,
+            "name" : "Use CSV header line",
+            "sensitive" : false
+          },
+          "CSV charset" : {
+            "displayName" : "CSV charset",
+            "identifiesControllerService" : false,
+            "name" : "CSV charset",
+            "sensitive" : false
+          },
+          "Lines to skip" : {
+            "displayName" : "Lines to skip",
+            "identifiesControllerService" : false,
+            "name" : "Lines to skip",
+            "sensitive" : false
+          },
+          "CSV delimiter" : {
+            "displayName" : "CSV delimiter",
+            "identifiesControllerService" : false,
+            "name" : "CSV delimiter",
+            "sensitive" : false
+          },
+          "Hadoop configuration files" : {
+            "displayName" : "Hadoop configuration Resources",
+            "identifiesControllerService" : false,
+            "name" : "Hadoop configuration files",
+            "sensitive" : false
+          },
+          "kite-compression-type" : {
+            "displayName" : "Compression type",
+            "identifiesControllerService" : false,
+            "name" : "kite-compression-type",
+            "sensitive" : false
+          },
+          "CSV escape character" : {
+            "displayName" : "CSV escape character",
+            "identifiesControllerService" : false,
+            "name" : "CSV escape character",
+            "sensitive" : false
+          },
+          "Record schema" : {
+            "displayName" : "Record schema",
+            "identifiesControllerService" : false,
+            "name" : "Record schema",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.kite.ConvertCSVToAvro",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "original", "unsupported content", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kite-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "f4e30a2b-3f65-3627-af13-d7ee70c09761",
+        "name" : "InferAvroSchema",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 903.0,
+          "y" : 663.0
+        },
+        "properties" : {
+          "Schema Output Destination" : "flowfile-attribute",
+          "Get CSV Header Definition From Data" : "true",
+          "Avro Record Name" : "CSV",
+          "Charset" : "UTF-8",
+          "CSV Header Line Skip Count" : "0",
+          "CSV delimiter" : ",",
+          "CSV Escape String" : "\\",
+          "Input Content Type" : "csv",
+          "Pretty Avro Output" : "true",
+          "CSV Quote String" : "'",
+          "Number Of Records To Analyze" : "10"
+        },
+        "propertyDescriptors" : {
+          "Schema Output Destination" : {
+            "displayName" : "Schema Output Destination",
+            "identifiesControllerService" : false,
+            "name" : "Schema Output Destination",
+            "sensitive" : false
+          },
+          "Get CSV Header Definition From Data" : {
+            "displayName" : "Get CSV Header Definition From Data",
+            "identifiesControllerService" : false,
+            "name" : "Get CSV Header Definition From Data",
+            "sensitive" : false
+          },
+          "Avro Record Name" : {
+            "displayName" : "Avro Record Name",
+            "identifiesControllerService" : false,
+            "name" : "Avro Record Name",
+            "sensitive" : false
+          },
+          "Charset" : {
+            "displayName" : "Charset",
+            "identifiesControllerService" : false,
+            "name" : "Charset",
+            "sensitive" : false
+          },
+          "CSV Header Line Skip Count" : {
+            "displayName" : "CSV Header Line Skip Count",
+            "identifiesControllerService" : false,
+            "name" : "CSV Header Line Skip Count",
+            "sensitive" : false
+          },
+          "CSV delimiter" : {
+            "displayName" : "CSV delimiter",
+            "identifiesControllerService" : false,
+            "name" : "CSV delimiter",
+            "sensitive" : false
+          },
+          "CSV Escape String" : {
+            "displayName" : "CSV Escape String",
+            "identifiesControllerService" : false,
+            "name" : "CSV Escape String",
+            "sensitive" : false
+          },
+          "CSV Header Definition" : {
+            "displayName" : "CSV Header Definition",
+            "identifiesControllerService" : false,
+            "name" : "CSV Header Definition",
+            "sensitive" : false
+          },
+          "Input Content Type" : {
+            "displayName" : "Input Content Type",
+            "identifiesControllerService" : false,
+            "name" : "Input Content Type",
+            "sensitive" : false
+          },
+          "Pretty Avro Output" : {
+            "displayName" : "Pretty Avro Output",
+            "identifiesControllerService" : false,
+            "name" : "Pretty Avro Output",
+            "sensitive" : false
+          },
+          "CSV Quote String" : {
+            "displayName" : "CSV Quote String",
+            "identifiesControllerService" : false,
+            "name" : "CSV Quote String",
+            "sensitive" : false
+          },
+          "Number Of Records To Analyze" : {
+            "displayName" : "Number Of Records To Analyze",
+            "identifiesControllerService" : false,
+            "name" : "Number Of Records To Analyze",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.kite.InferAvroSchema",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e96a0927-e587-3bd6-9052-adaaf9d23567",
+        "identifier" : "fb3849fd-073b-3dd8-b6ed-774763393460",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 675.0,
+          "y" : 429.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "d59b6806-16fd-3065-bd14-b79b79dbae11",
+          "name" : "Set Avro Schema",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "c11dfc95-7149-38de-bef6-33bc2cdd3d88",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "e2ff4eeb-41fb-3574-b4ad-e43b0c7a7cf1",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "4e6716d2-6e8c-3a32-9b44-64b52de3b0d9",
+          "name" : "Set Avro Schema",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "cece9381-0948-3565-be85-e84ae152912d",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "8cc6bb3e-4615-39ed-9829-ab93e7d1895a",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "c84ccc20-83de-35bc-a202-ec4d98480fcd",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "f407dc5e-5261-35d1-9d91-9255424b95a7",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "d59b6806-16fd-3065-bd14-b79b79dbae11",
+          "name" : "Set Avro Schema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "c84ccc20-83de-35bc-a202-ec4d98480fcd",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "060b6e1b-4425-3380-b75d-73fca465b503",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "4e6716d2-6e8c-3a32-9b44-64b52de3b0d9",
+          "name" : "Set Avro Schema",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "ef8c967d-f8de-31d0-b9b3-f9081cff562e",
+          "name" : "PutFile",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "f2f337cd-db95-31fd-aaf3-2b6729464dfc",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+          "id" : "c84ccc20-83de-35bc-a202-ec4d98480fcd",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      } ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "2b53ed57-4f12-3ad2-8efb-737c745e5d98",
+      "identifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "Multiple Streams with Single Convert Avro",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : -16.266528789177073,
+        "y" : -45.12151760560482
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "8cc6bb3e-4615-39ed-9829-ab93e7d1895a",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 842.0,
+          "y" : 50.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "ef8c967d-f8de-31d0-b9b3-f9081cff562e",
+        "name" : "PutFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 559.0,
+          "y" : 786.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "./data/out/avro",
+          "Conflict Resolution Strategy" : "fail"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "d59b6806-16fd-3065-bd14-b79b79dbae11",
+        "name" : "Set Avro Schema",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 347.0391845703125,
+          "y" : 256.0071105957031
+        },
+        "properties" : {
+          "avro.schema" : "{\"namespace\": \"example.avro\",\n \"type\": \"record\",\n \"name\": \"User\",\n \"fields\": [\n     {\"name\": \"name\", \"type\": \"string\"},\n     {\"name\": \"favorite_number\",  \"type\": [\"int\", \"null\"]},\n     {\"name\": \"favorite_color\", \"type\": [\"string\", \"null\"]}\n ]\n}",
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "avro.schema" : {
+            "displayName" : "avro.schema",
+            "identifiesControllerService" : false,
+            "name" : "avro.schema",
+            "sensitive" : false
+          },
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "e2ff4eeb-41fb-3574-b4ad-e43b0c7a7cf1",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 322.0,
+          "y" : 50.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "4e6716d2-6e8c-3a32-9b44-64b52de3b0d9",
+        "name" : "Set Avro Schema",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 839.0,
+          "y" : 254.0
+        },
+        "properties" : {
+          "avro.schema" : "{\"namespace\": \"example.avro\",\n \"type\": \"record\",\n \"name\": \"User\",\n \"fields\": [\n     {\"name\": \"name\", \"type\": \"string\"},\n     {\"name\": \"favorite_number\",  \"type\": [\"int\", \"null\"]},\n     {\"name\": \"favorite_color\", \"type\": [\"string\", \"null\"]}\n ]\n}",
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "avro.schema" : {
+            "displayName" : "avro.schema",
+            "identifiesControllerService" : false,
+            "name" : "avro.schema",
+            "sensitive" : false
+          },
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "incompatible", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kite-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "e6225c6c-e9b4-363b-9f1a-d4d4e7c63668",
+        "identifier" : "c84ccc20-83de-35bc-a202-ec4d98480fcd",
+        "name" : "ConvertCSVToAvro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 561.0,
+          "y" : 555.0
+        },
+        "properties" : {
+          "CSV quote character" : "\"",
+          "Use CSV header line" : "false",
+          "CSV charset" : "utf8",
+          "Lines to skip" : "0",
+          "CSV delimiter" : ",",
+          "kite-compression-type" : "SNAPPY",
+          "CSV escape character" : "\\",
+          "Record schema" : "${avro.schema}"
+        },
+        "propertyDescriptors" : {
+          "CSV quote character" : {
+            "displayName" : "CSV quote character",
+            "identifiesControllerService" : false,
+            "name" : "CSV quote character",
+            "sensitive" : false
+          },
+          "Use CSV header line" : {
+            "displayName" : "Use CSV header line",
+            "identifiesControllerService" : false,
+            "name" : "Use CSV header line",
+            "sensitive" : false
+          },
+          "CSV charset" : {
+            "displayName" : "CSV charset",
+            "identifiesControllerService" : false,
+            "name" : "CSV charset",
+            "sensitive" : false
+          },
+          "Lines to skip" : {
+            "displayName" : "Lines to skip",
+            "identifiesControllerService" : false,
+            "name" : "Lines to skip",
+            "sensitive" : false
+          },
+          "CSV delimiter" : {
+            "displayName" : "CSV delimiter",
+            "identifiesControllerService" : false,
+            "name" : "CSV delimiter",
+            "sensitive" : false
+          },
+          "Hadoop configuration files" : {
+            "displayName" : "Hadoop configuration Resources",
+            "identifiesControllerService" : false,
+            "name" : "Hadoop configuration files",
+            "sensitive" : false
+          },
+          "kite-compression-type" : {
+            "displayName" : "Compression type",
+            "identifiesControllerService" : false,
+            "name" : "kite-compression-type",
+            "sensitive" : false
+          },
+          "CSV escape character" : {
+            "displayName" : "CSV escape character",
+            "identifiesControllerService" : false,
+            "name" : "CSV escape character",
+            "sensitive" : false
+          },
+          "Record schema" : {
+            "displayName" : "Record schema",
+            "identifiesControllerService" : false,
+            "name" : "Record schema",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.kite.ConvertCSVToAvro",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "ce7672b3-28f8-30d8-a73a-5b493dbccf1f",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "046d99b9-6199-3c9e-a237-35bd100926ee",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "1eb77b46-8b42-37dc-b3c1-25d83ec8c9f6",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "28bdc4de-21a5-390a-bf82-ac71086d08a0",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "910f96e6-5769-313a-b5e8-02504319c3c5",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "50985b8d-560c-3388-bc51-c9682f72581b",
+          "name" : "GetFile",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "eb095bac-91a2-386e-a8d7-287e9a00b89f",
+          "name" : "PutFile",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "d471bf81-2ec7-347e-8a7e-9f48a04023d8",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "ce7672b3-28f8-30d8-a73a-5b493dbccf1f",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "eb095bac-91a2-386e-a8d7-287e9a00b89f",
+          "name" : "PutFile",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "828e3180-3ebd-300a-97e7-af5ea5b4523f",
+        "labelIndex" : 1,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+          "id" : "28bdc4de-21a5-390a-bf82-ac71086d08a0",
+          "name" : "ConvertCSVToAvro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      } ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "2b53ed57-4f12-3ad2-8efb-737c745e5d98",
+      "identifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "Multiple Streams with Separate Convert Avro",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : -18.266528789177073,
+        "y" : 154.87848239439518
+      },
+      "processGroups" : [ ],
+      "processors" : [ {
+        "autoTerminatedRelationships" : [ "incompatible", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kite-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "28bdc4de-21a5-390a-bf82-ac71086d08a0",
+        "name" : "ConvertCSVToAvro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 843.0,
+          "y" : 259.0
+        },
+        "properties" : {
+          "CSV quote character" : "\"",
+          "Use CSV header line" : "false",
+          "CSV charset" : "utf8",
+          "Lines to skip" : "0",
+          "CSV delimiter" : ",",
+          "kite-compression-type" : "SNAPPY",
+          "CSV escape character" : "\\",
+          "Record schema" : "{\"namespace\": \"example.avro\",\n \"type\": \"record\",\n \"name\": \"User\",\n \"fields\": [\n     {\"name\": \"name\", \"type\": \"string\"},\n     {\"name\": \"favorite_number\",  \"type\": [\"int\", \"null\"]},\n     {\"name\": \"favorite_color\", \"type\": [\"string\", \"null\"]}\n ]\n}"
+        },
+        "propertyDescriptors" : {
+          "CSV quote character" : {
+            "displayName" : "CSV quote character",
+            "identifiesControllerService" : false,
+            "name" : "CSV quote character",
+            "sensitive" : false
+          },
+          "Use CSV header line" : {
+            "displayName" : "Use CSV header line",
+            "identifiesControllerService" : false,
+            "name" : "Use CSV header line",
+            "sensitive" : false
+          },
+          "CSV charset" : {
+            "displayName" : "CSV charset",
+            "identifiesControllerService" : false,
+            "name" : "CSV charset",
+            "sensitive" : false
+          },
+          "Lines to skip" : {
+            "displayName" : "Lines to skip",
+            "identifiesControllerService" : false,
+            "name" : "Lines to skip",
+            "sensitive" : false
+          },
+          "CSV delimiter" : {
+            "displayName" : "CSV delimiter",
+            "identifiesControllerService" : false,
+            "name" : "CSV delimiter",
+            "sensitive" : false
+          },
+          "Hadoop configuration files" : {
+            "displayName" : "Hadoop configuration Resources",
+            "identifiesControllerService" : false,
+            "name" : "Hadoop configuration files",
+            "sensitive" : false
+          },
+          "kite-compression-type" : {
+            "displayName" : "Compression type",
+            "identifiesControllerService" : false,
+            "name" : "kite-compression-type",
+            "sensitive" : false
+          },
+          "CSV escape character" : {
+            "displayName" : "CSV escape character",
+            "identifiesControllerService" : false,
+            "name" : "CSV escape character",
+            "sensitive" : false
+          },
+          "Record schema" : {
+            "displayName" : "Record schema",
+            "identifiesControllerService" : false,
+            "name" : "Record schema",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.kite.ConvertCSVToAvro",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "1eb77b46-8b42-37dc-b3c1-25d83ec8c9f6",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 322.0,
+          "y" : 50.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "50985b8d-560c-3388-bc51-c9682f72581b",
+        "name" : "GetFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 842.0,
+          "y" : 50.0
+        },
+        "properties" : {
+          "Keep Source File" : "false",
+          "Minimum File Age" : "0 sec",
+          "Polling Interval" : "0 sec",
+          "Input Directory" : "./data/in/csv",
+          "Batch Size" : "10",
+          "Minimum File Size" : "0 B",
+          "Ignore Hidden Files" : "true",
+          "Recurse Subdirectories" : "true",
+          "File Filter" : "[^\\.].*"
+        },
+        "propertyDescriptors" : {
+          "Keep Source File" : {
+            "displayName" : "Keep Source File",
+            "identifiesControllerService" : false,
+            "name" : "Keep Source File",
+            "sensitive" : false
+          },
+          "Minimum File Age" : {
+            "displayName" : "Minimum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Age",
+            "sensitive" : false
+          },
+          "Polling Interval" : {
+            "displayName" : "Polling Interval",
+            "identifiesControllerService" : false,
+            "name" : "Polling Interval",
+            "sensitive" : false
+          },
+          "Input Directory" : {
+            "displayName" : "Input Directory",
+            "identifiesControllerService" : false,
+            "name" : "Input Directory",
+            "sensitive" : false
+          },
+          "Maximum File Age" : {
+            "displayName" : "Maximum File Age",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Age",
+            "sensitive" : false
+          },
+          "Batch Size" : {
+            "displayName" : "Batch Size",
+            "identifiesControllerService" : false,
+            "name" : "Batch Size",
+            "sensitive" : false
+          },
+          "Maximum File Size" : {
+            "displayName" : "Maximum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Size",
+            "sensitive" : false
+          },
+          "Minimum File Size" : {
+            "displayName" : "Minimum File Size",
+            "identifiesControllerService" : false,
+            "name" : "Minimum File Size",
+            "sensitive" : false
+          },
+          "Ignore Hidden Files" : {
+            "displayName" : "Ignore Hidden Files",
+            "identifiesControllerService" : false,
+            "name" : "Ignore Hidden Files",
+            "sensitive" : false
+          },
+          "Recurse Subdirectories" : {
+            "displayName" : "Recurse Subdirectories",
+            "identifiesControllerService" : false,
+            "name" : "Recurse Subdirectories",
+            "sensitive" : false
+          },
+          "File Filter" : {
+            "displayName" : "File Filter",
+            "identifiesControllerService" : false,
+            "name" : "File Filter",
+            "sensitive" : false
+          },
+          "Path Filter" : {
+            "displayName" : "Path Filter",
+            "identifiesControllerService" : false,
+            "name" : "Path Filter",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "1 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.GetFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "eb095bac-91a2-386e-a8d7-287e9a00b89f",
+        "name" : "PutFile",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 563.0,
+          "y" : 549.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "./data/out/avro",
+          "Conflict Resolution Strategy" : "fail"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "incompatible", "failure" ],
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-kite-nar",
+          "group" : "org.apache.nifi",
+          "version" : "1.9.1"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "986609e6-a72f-3416-a85c-8e89a6d65a56",
+        "identifier" : "ce7672b3-28f8-30d8-a73a-5b493dbccf1f",
+        "name" : "ConvertCSVToAvro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 319.0,
+          "y" : 266.0
+        },
+        "properties" : {
+          "CSV quote character" : "\"",
+          "Use CSV header line" : "false",
+          "CSV charset" : "utf8",
+          "Lines to skip" : "0",
+          "CSV delimiter" : ",",
+          "kite-compression-type" : "SNAPPY",
+          "CSV escape character" : "\\",
+          "Record schema" : "{\"namespace\": \"example.avro\",\n \"type\": \"record\",\n \"name\": \"User\",\n \"fields\": [\n     {\"name\": \"name\", \"type\": \"string\"},\n     {\"name\": \"favorite_number\",  \"type\": [\"int\", \"null\"]},\n     {\"name\": \"favorite_color\", \"type\": [\"string\", \"null\"]}\n ]\n}"
+        },
+        "propertyDescriptors" : {
+          "CSV quote character" : {
+            "displayName" : "CSV quote character",
+            "identifiesControllerService" : false,
+            "name" : "CSV quote character",
+            "sensitive" : false
+          },
+          "Use CSV header line" : {
+            "displayName" : "Use CSV header line",
+            "identifiesControllerService" : false,
+            "name" : "Use CSV header line",
+            "sensitive" : false
+          },
+          "CSV charset" : {
+            "displayName" : "CSV charset",
+            "identifiesControllerService" : false,
+            "name" : "CSV charset",
+            "sensitive" : false
+          },
+          "Lines to skip" : {
+            "displayName" : "Lines to skip",
+            "identifiesControllerService" : false,
+            "name" : "Lines to skip",
+            "sensitive" : false
+          },
+          "CSV delimiter" : {
+            "displayName" : "CSV delimiter",
+            "identifiesControllerService" : false,
+            "name" : "CSV delimiter",
+            "sensitive" : false
+          },
+          "Hadoop configuration files" : {
+            "displayName" : "Hadoop configuration Resources",
+            "identifiesControllerService" : false,
+            "name" : "Hadoop configuration files",
+            "sensitive" : false
+          },
+          "kite-compression-type" : {
+            "displayName" : "Compression type",
+            "identifiesControllerService" : false,
+            "name" : "kite-compression-type",
+            "sensitive" : false
+          },
+          "CSV escape character" : {
+            "displayName" : "CSV escape character",
+            "identifiesControllerService" : false,
+            "name" : "CSV escape character",
+            "sensitive" : false
+          },
+          "Record schema" : {
+            "displayName" : "Record schema",
+            "identifiesControllerService" : false,
+            "name" : "Record schema",
+            "sensitive" : false
+          }
+        },
+        "runDurationMillis" : 0,
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.kite.ConvertCSVToAvro",
+        "yieldDuration" : "1 sec"
+      } ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    } ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
