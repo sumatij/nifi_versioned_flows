@@ -1,0 +1,306 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+        "id" : "22a3a983-560e-3bc7-89b3-c75778612b6b",
+        "name" : "PutElasticsearchHttp",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+      "identifier" : "7645501c-e9c8-30db-b800-5a45e58c8830",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+        "id" : "c39dc7d6-95ba-3580-bd82-51316316d6dd",
+        "name" : "GetFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Put_Data_Elastic_Search",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 10433.751953125,
+      "y" : -1963.3193359375
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success", "failure", "retry" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+      "identifier" : "22a3a983-560e-3bc7-89b3-c75778612b6b",
+      "name" : "PutElasticsearchHttp",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 591.0697490219482,
+        "y" : 319.8564262231282
+      },
+      "properties" : {
+        "elasticsearch-http-response-timeout" : "15 secs",
+        "put-es-type" : "details",
+        "put-es-index" : "name",
+        "elasticsearch-http-url" : "http://localhost:9200/",
+        "put-es-batch-size" : "100",
+        "elasticsearch-http-connect-timeout" : "5 secs",
+        "put-es-index-op" : "index",
+        "Character Set" : "UTF-8"
+      },
+      "propertyDescriptors" : {
+        "elasticsearch-http-response-timeout" : {
+          "displayName" : "Response Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-response-timeout",
+          "sensitive" : false
+        },
+        "put-es-id-attr" : {
+          "displayName" : "Identifier Attribute",
+          "identifiesControllerService" : false,
+          "name" : "put-es-id-attr",
+          "sensitive" : false
+        },
+        "put-es-type" : {
+          "displayName" : "Type",
+          "identifiesControllerService" : false,
+          "name" : "put-es-type",
+          "sensitive" : false
+        },
+        "put-es-index" : {
+          "displayName" : "Index",
+          "identifiesControllerService" : false,
+          "name" : "put-es-index",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-url" : {
+          "displayName" : "Elasticsearch URL",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-url",
+          "sensitive" : false
+        },
+        "put-es-batch-size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "put-es-batch-size",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-connect-timeout" : {
+          "displayName" : "Connection Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-connect-timeout",
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "put-es-index-op" : {
+          "displayName" : "Index Operation",
+          "identifiesControllerService" : false,
+          "name" : "put-es-index-op",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-host" : {
+          "displayName" : "Proxy Host",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-host",
+          "sensitive" : false
+        },
+        "proxy-username" : {
+          "displayName" : "Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "proxy-username",
+          "sensitive" : false
+        },
+        "proxy-password" : {
+          "displayName" : "Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "proxy-password",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-port" : {
+          "displayName" : "Proxy Port",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-port",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "dc1d64d0-61a6-3ee2-8d61-a4900277d2ea",
+      "identifier" : "c39dc7d6-95ba-3580-bd82-51316316d6dd",
+      "name" : "GetFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 423.0,
+        "y" : 17.0
+      },
+      "properties" : {
+        "Keep Source File" : "false",
+        "Minimum File Age" : "0 sec",
+        "Polling Interval" : "0 sec",
+        "Input Directory" : "C:\\Sumati\\NiFi_Source\\test",
+        "Batch Size" : "10",
+        "Minimum File Size" : "0 B",
+        "Ignore Hidden Files" : "true",
+        "Recurse Subdirectories" : "true",
+        "File Filter" : "[^\\.].*"
+      },
+      "propertyDescriptors" : {
+        "Keep Source File" : {
+          "displayName" : "Keep Source File",
+          "identifiesControllerService" : false,
+          "name" : "Keep Source File",
+          "sensitive" : false
+        },
+        "Minimum File Age" : {
+          "displayName" : "Minimum File Age",
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Age",
+          "sensitive" : false
+        },
+        "Polling Interval" : {
+          "displayName" : "Polling Interval",
+          "identifiesControllerService" : false,
+          "name" : "Polling Interval",
+          "sensitive" : false
+        },
+        "Input Directory" : {
+          "displayName" : "Input Directory",
+          "identifiesControllerService" : false,
+          "name" : "Input Directory",
+          "sensitive" : false
+        },
+        "Maximum File Age" : {
+          "displayName" : "Maximum File Age",
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Age",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Maximum File Size" : {
+          "displayName" : "Maximum File Size",
+          "identifiesControllerService" : false,
+          "name" : "Maximum File Size",
+          "sensitive" : false
+        },
+        "Minimum File Size" : {
+          "displayName" : "Minimum File Size",
+          "identifiesControllerService" : false,
+          "name" : "Minimum File Size",
+          "sensitive" : false
+        },
+        "Ignore Hidden Files" : {
+          "displayName" : "Ignore Hidden Files",
+          "identifiesControllerService" : false,
+          "name" : "Ignore Hidden Files",
+          "sensitive" : false
+        },
+        "Recurse Subdirectories" : {
+          "displayName" : "Recurse Subdirectories",
+          "identifiesControllerService" : false,
+          "name" : "Recurse Subdirectories",
+          "sensitive" : false
+        },
+        "File Filter" : {
+          "displayName" : "File Filter",
+          "identifiesControllerService" : false,
+          "name" : "File Filter",
+          "sensitive" : false
+        },
+        "Path Filter" : {
+          "displayName" : "Path Filter",
+          "identifiesControllerService" : false,
+          "name" : "Path Filter",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GetFile",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
