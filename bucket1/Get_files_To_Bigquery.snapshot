@@ -1,0 +1,229 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+        "id" : "e433b066-edf3-394d-b23e-b0e630923f01",
+        "name" : "ConvertJSONToAvro",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+      "identifier" : "32770dc7-0693-30ed-ad1b-13cead92f5f3",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure", "success", "not found", "retry" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+        "id" : "349bd3c6-9246-3910-b973-f157b2e13816",
+        "name" : "FetchElasticsearchHttp",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Convert_Avro",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 9967.2099609375,
+      "y" : -1953.4945068359375
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-kite-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+      "identifier" : "e433b066-edf3-394d-b23e-b0e630923f01",
+      "name" : "ConvertJSONToAvro",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 456.0,
+        "y" : 436.0
+      },
+      "properties" : {
+        "kite-compression-type" : "SNAPPY"
+      },
+      "propertyDescriptors" : {
+        "Hadoop configuration files" : {
+          "displayName" : "Hadoop configuration Resources",
+          "identifiesControllerService" : false,
+          "name" : "Hadoop configuration files",
+          "sensitive" : false
+        },
+        "kite-compression-type" : {
+          "displayName" : "Compression type",
+          "identifiesControllerService" : false,
+          "name" : "kite-compression-type",
+          "sensitive" : false
+        },
+        "Record schema" : {
+          "displayName" : "Record schema",
+          "identifiesControllerService" : false,
+          "name" : "Record schema",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.kite.ConvertJSONToAvro",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-elasticsearch-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "e6c09472-5f83-39d0-a6af-198de2ab9e59",
+      "identifier" : "349bd3c6-9246-3910-b973-f157b2e13816",
+      "name" : "FetchElasticsearchHttp",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 365.0,
+        "y" : 86.0
+      },
+      "properties" : {
+        "elasticsearch-http-response-timeout" : "15 secs",
+        "fetch-es-doc-id" : "c7JsfWoB2pT2QI9QyFL8",
+        "fetch-es-index" : "animals",
+        "elasticsearch-http-url" : "http://localhost:9200/",
+        "elasticsearch-http-connect-timeout" : "5 secs"
+      },
+      "propertyDescriptors" : {
+        "elasticsearch-http-response-timeout" : {
+          "displayName" : "Response Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-response-timeout",
+          "sensitive" : false
+        },
+        "fetch-es-doc-id" : {
+          "displayName" : "Document Identifier",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-doc-id",
+          "sensitive" : false
+        },
+        "fetch-es-index" : {
+          "displayName" : "Index",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-index",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-url" : {
+          "displayName" : "Elasticsearch URL",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-url",
+          "sensitive" : false
+        },
+        "fetch-es-fields" : {
+          "displayName" : "Fields",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-fields",
+          "sensitive" : false
+        },
+        "fetch-es-type" : {
+          "displayName" : "Type",
+          "identifiesControllerService" : false,
+          "name" : "fetch-es-type",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "elasticsearch-http-connect-timeout" : {
+          "displayName" : "Connection Timeout",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-connect-timeout",
+          "sensitive" : false
+        },
+        "Username" : {
+          "displayName" : "Username",
+          "identifiesControllerService" : false,
+          "name" : "Username",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-host" : {
+          "displayName" : "Proxy Host",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-host",
+          "sensitive" : false
+        },
+        "proxy-username" : {
+          "displayName" : "Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "proxy-username",
+          "sensitive" : false
+        },
+        "proxy-password" : {
+          "displayName" : "Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "proxy-password",
+          "sensitive" : false
+        },
+        "elasticsearch-http-proxy-port" : {
+          "displayName" : "Proxy Port",
+          "identifiesControllerService" : false,
+          "name" : "elasticsearch-http-proxy-port",
+          "sensitive" : false
+        },
+        "Password" : {
+          "displayName" : "Password",
+          "identifiesControllerService" : false,
+          "name" : "Password",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.elasticsearch.FetchElasticsearchHttp",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
