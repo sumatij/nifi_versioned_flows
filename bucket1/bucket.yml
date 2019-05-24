@@ -8,6 +8,7 @@ flows:
   25ca6474-8194-40ad-8ede-01ff724e2dc4: {ver: 1, file: Test_github.snapshot}
   99d41564-b3fc-418a-8d68-4751263c7bfb: {ver: 1, file: ELK_To_BigQuery.snapshot}
   08f26311-0666-43a3-8bbe-af5021faa24d: {ver: 1, file: ELK_to_GCS.snapshot}
+  38c37250-b5f8-40eb-9966-0806bf348a67: {ver: 1, file: GCS_Bigquery.snapshot}
   2b568ef1-e725-42d7-894d-2a638366f9d2: {ver: 1, file: ELK_to_Bigquery.snapshot}
 layoutVer: 1
 bucketId: 103f79b7-8419-4097-8721-f670a228fa01

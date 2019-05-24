@@ -1,0 +1,888 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "d265bb2d-6f7c-3dd4-ae7f-77e1b9585022",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "5bc90655-1df7-3ada-b3fd-822721bca1cf",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "4acbe520-1554-3990-8a20-67114df78089",
+        "name" : "ListGCSBucket",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "65c76b40-ca2e-3b9c-8b69-2d2f8584f8cc",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "a5a17308-75f2-36fe-b0fb-e44959e1bcb6",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure", "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "f2600cd8-bed6-36f4-90b3-fb9492ad56f6",
+        "name" : "FetchGCSObject",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "7b584ced-990e-3f9b-952f-e1c611824b47",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "60d63813-db6b-329b-bc6c-d3d15e895605",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "65c76b40-ca2e-3b9c-8b69-2d2f8584f8cc",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "5105633c-8b6c-3d35-b9c5-9159c5f007b2",
+        "name" : "PutBigQueryBatch",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "b53c4b33-17d4-3c2e-8cb8-284d60d66719",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "filename" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "65c76b40-ca2e-3b9c-8b69-2d2f8584f8cc",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "f2600cd8-bed6-36f4-90b3-fb9492ad56f6",
+        "name" : "FetchGCSObject",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "6ac0aa42-4743-3575-8cb8-9735f5bd58d4",
+      "labelIndex" : 1,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+        "id" : "08ffac2b-cf11-3a5a-99c0-3212c846fc30",
+        "name" : "ListGCSBucket",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+    "inputPorts" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "height" : 150.0,
+      "identifier" : "6b1e2c1b-9552-31af-8a5c-b263b53e2db7",
+      "label" : "ListGCSBucket processor works one time. \n\nIf there are any changes in the GCS then only it will fetch the data otherwise it will not fetch anything.",
+      "position" : {
+        "x" : 1172.432012509177,
+        "y" : 510.97423981512236
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 150.0
+    } ],
+    "name" : "GCS_to_BQ",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 9917.16384629233,
+      "y" : -1480.0324800525707
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-gcp-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "4acbe520-1554-3990-8a20-67114df78089",
+      "name" : "ListGCSBucket",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 814.9984325884361,
+        "y" : 15.000022788118258
+      },
+      "properties" : {
+        "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
+        "gcs-use-generations" : "true",
+        "gcp-retry-count" : "6",
+        "gcs-bucket" : "test_bucket_2487"
+      },
+      "propertyDescriptors" : {
+        "GCP Credentials Provider Service" : {
+          "displayName" : "GCP Credentials Provider Service",
+          "identifiesControllerService" : true,
+          "name" : "GCP Credentials Provider Service",
+          "sensitive" : false
+        },
+        "gcp-proxy-host" : {
+          "displayName" : "Proxy host",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-host",
+          "sensitive" : false
+        },
+        "gcs-use-generations" : {
+          "displayName" : "Use Generations",
+          "identifiesControllerService" : false,
+          "name" : "gcs-use-generations",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-password" : {
+          "displayName" : "HTTP Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-password",
+          "sensitive" : false
+        },
+        "gcp-retry-count" : {
+          "displayName" : "Number of retries",
+          "identifiesControllerService" : false,
+          "name" : "gcp-retry-count",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-name" : {
+          "displayName" : "HTTP Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-name",
+          "sensitive" : false
+        },
+        "gcp-proxy-port" : {
+          "displayName" : "Proxy port",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-port",
+          "sensitive" : false
+        },
+        "gcs-bucket" : {
+          "displayName" : "Bucket",
+          "identifiesControllerService" : false,
+          "name" : "gcs-bucket",
+          "sensitive" : false
+        },
+        "gcp-project-id" : {
+          "displayName" : "Project ID",
+          "identifiesControllerService" : false,
+          "name" : "gcp-project-id",
+          "sensitive" : false
+        },
+        "gcs-prefix" : {
+          "displayName" : "Prefix",
+          "identifiesControllerService" : false,
+          "name" : "gcs-prefix",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.gcp.storage.ListGCSBucket",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-gcp-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "08ffac2b-cf11-3a5a-99c0-3212c846fc30",
+      "name" : "ListGCSBucket",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 327.9984325884361,
+        "y" : 44.00002851016416
+      },
+      "properties" : {
+        "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
+        "gcs-use-generations" : "false",
+        "gcp-retry-count" : "6",
+        "gcs-bucket" : "test_bucket_2487"
+      },
+      "propertyDescriptors" : {
+        "GCP Credentials Provider Service" : {
+          "displayName" : "GCP Credentials Provider Service",
+          "identifiesControllerService" : true,
+          "name" : "GCP Credentials Provider Service",
+          "sensitive" : false
+        },
+        "gcp-proxy-host" : {
+          "displayName" : "Proxy host",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-host",
+          "sensitive" : false
+        },
+        "gcs-use-generations" : {
+          "displayName" : "Use Generations",
+          "identifiesControllerService" : false,
+          "name" : "gcs-use-generations",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-password" : {
+          "displayName" : "HTTP Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-password",
+          "sensitive" : false
+        },
+        "gcp-retry-count" : {
+          "displayName" : "Number of retries",
+          "identifiesControllerService" : false,
+          "name" : "gcp-retry-count",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-name" : {
+          "displayName" : "HTTP Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-name",
+          "sensitive" : false
+        },
+        "gcp-proxy-port" : {
+          "displayName" : "Proxy port",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-port",
+          "sensitive" : false
+        },
+        "gcs-bucket" : {
+          "displayName" : "Bucket",
+          "identifiesControllerService" : false,
+          "name" : "gcs-bucket",
+          "sensitive" : false
+        },
+        "gcp-project-id" : {
+          "displayName" : "Project ID",
+          "identifiesControllerService" : false,
+          "name" : "gcp-project-id",
+          "sensitive" : false
+        },
+        "gcs-prefix" : {
+          "displayName" : "Prefix",
+          "identifiesControllerService" : false,
+          "name" : "gcs-prefix",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.gcp.storage.ListGCSBucket",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "65c76b40-ca2e-3b9c-8b69-2d2f8584f8cc",
+      "name" : "RouteOnAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 327.9984325884361,
+        "y" : 588.0000285101642
+      },
+      "properties" : {
+        "Routing Strategy" : "Route to Property name",
+        "filename" : "${filename:equals('Twitter')}"
+      },
+      "propertyDescriptors" : {
+        "Routing Strategy" : {
+          "displayName" : "Routing Strategy",
+          "identifiesControllerService" : false,
+          "name" : "Routing Strategy",
+          "sensitive" : false
+        },
+        "filename" : {
+          "displayName" : "filename",
+          "identifiesControllerService" : false,
+          "name" : "filename",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-gcp-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "f2600cd8-bed6-36f4-90b3-fb9492ad56f6",
+      "name" : "FetchGCSObject",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 338.99846310601424,
+        "y" : 308.00003327853574
+      },
+      "properties" : {
+        "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
+        "gcs-key" : "${filename}",
+        "gcp-retry-count" : "6",
+        "gcs-bucket" : "test_bucket_2487"
+      },
+      "propertyDescriptors" : {
+        "GCP Credentials Provider Service" : {
+          "displayName" : "GCP Credentials Provider Service",
+          "identifiesControllerService" : true,
+          "name" : "GCP Credentials Provider Service",
+          "sensitive" : false
+        },
+        "gcp-proxy-host" : {
+          "displayName" : "Proxy host",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-host",
+          "sensitive" : false
+        },
+        "gcs-key" : {
+          "displayName" : "Key",
+          "identifiesControllerService" : false,
+          "name" : "gcs-key",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-password" : {
+          "displayName" : "HTTP Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-password",
+          "sensitive" : false
+        },
+        "gcp-retry-count" : {
+          "displayName" : "Number of retries",
+          "identifiesControllerService" : false,
+          "name" : "gcp-retry-count",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "gcs-server-side-encryption-key" : {
+          "displayName" : "Server Side Encryption Key",
+          "identifiesControllerService" : false,
+          "name" : "gcs-server-side-encryption-key",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-name" : {
+          "displayName" : "HTTP Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-name",
+          "sensitive" : false
+        },
+        "gcp-proxy-port" : {
+          "displayName" : "Proxy port",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-port",
+          "sensitive" : false
+        },
+        "gcs-bucket" : {
+          "displayName" : "Bucket",
+          "identifiesControllerService" : false,
+          "name" : "gcs-bucket",
+          "sensitive" : false
+        },
+        "gcp-project-id" : {
+          "displayName" : "Project ID",
+          "identifiesControllerService" : false,
+          "name" : "gcp-project-id",
+          "sensitive" : false
+        },
+        "gcs-generation" : {
+          "displayName" : "Object Generation",
+          "identifiesControllerService" : false,
+          "name" : "gcs-generation",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.gcp.storage.FetchGCSObject",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "7b584ced-990e-3f9b-952f-e1c611824b47",
+      "name" : "LogAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 587.9984325884361,
+        "y" : 854.0000285101642
+      },
+      "properties" : {
+        "character-set" : "windows-1252",
+        "Log Level" : "info",
+        "attributes-to-log-regex" : ".*",
+        "Log Payload" : "true"
+      },
+      "propertyDescriptors" : {
+        "Log prefix" : {
+          "displayName" : "Log prefix",
+          "identifiesControllerService" : false,
+          "name" : "Log prefix",
+          "sensitive" : false
+        },
+        "character-set" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "attributes-to-ignore-regex" : {
+          "displayName" : "Attributes to Ignore by Regular Expression",
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-ignore-regex",
+          "sensitive" : false
+        },
+        "Attributes to Ignore" : {
+          "displayName" : "Attributes to Ignore",
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore",
+          "sensitive" : false
+        },
+        "Attributes to Log" : {
+          "displayName" : "Attributes to Log",
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log",
+          "sensitive" : false
+        },
+        "attributes-to-log-regex" : {
+          "displayName" : "Attributes to Log by Regular Expression",
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-log-regex",
+          "sensitive" : false
+        },
+        "Log Payload" : {
+          "displayName" : "Log Payload",
+          "identifiesControllerService" : false,
+          "name" : "Log Payload",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success", "failure" ],
+      "bulletinLevel" : "INFO",
+      "bundle" : {
+        "artifact" : "nifi-gcp-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "5105633c-8b6c-3d35-b9c5-9159c5f007b2",
+      "name" : "PutBigQueryBatch",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 117.99843258843612,
+        "y" : 845.0000285101642
+      },
+      "properties" : {
+        "bq.readtimeout" : "5 minutes",
+        "bq.table.name" : "Twitter",
+        "bq.csv.charset" : "UTF-8",
+        "bq.load.type" : "AVRO",
+        "bq.csv.allow.quoted.new.lines" : "false",
+        "gcp-retry-count" : "6",
+        "bq.csv.quote" : "\"",
+        "bq.load.ignore_unknown" : "true",
+        "gcp-project-id" : "iron-cycle-236720",
+        "GCP Credentials Provider Service" : "698300d4-2d62-31b7-82de-c0b96607e040",
+        "bq.load.max_badrecords" : "20",
+        "bq.csv.delimiter" : ",",
+        "bq.csv.skip.leading.rows" : "0",
+        "bq.csv.allow.jagged.rows" : "false",
+        "bq.dataset" : "Names",
+        "bq.load.write_disposition" : "WRITE_TRUNCATE",
+        "bq.load.create_disposition" : "CREATE_IF_NEEDED"
+      },
+      "propertyDescriptors" : {
+        "bq.readtimeout" : {
+          "displayName" : "Read Timeout",
+          "identifiesControllerService" : false,
+          "name" : "bq.readtimeout",
+          "sensitive" : false
+        },
+        "gcp-proxy-host" : {
+          "displayName" : "Proxy host",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-host",
+          "sensitive" : false
+        },
+        "bq.table.name" : {
+          "displayName" : "Table Name",
+          "identifiesControllerService" : false,
+          "name" : "bq.table.name",
+          "sensitive" : false
+        },
+        "bq.csv.charset" : {
+          "displayName" : "CSV Input - Character Set",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.charset",
+          "sensitive" : false
+        },
+        "bq.load.type" : {
+          "displayName" : "Load file type",
+          "identifiesControllerService" : false,
+          "name" : "bq.load.type",
+          "sensitive" : false
+        },
+        "bq.csv.allow.quoted.new.lines" : {
+          "displayName" : "CSV Input - Allow Quoted New Lines",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.allow.quoted.new.lines",
+          "sensitive" : false
+        },
+        "gcp-retry-count" : {
+          "displayName" : "Number of retries",
+          "identifiesControllerService" : false,
+          "name" : "gcp-retry-count",
+          "sensitive" : false
+        },
+        "proxy-configuration-service" : {
+          "displayName" : "Proxy Configuration Service",
+          "identifiesControllerService" : true,
+          "name" : "proxy-configuration-service",
+          "sensitive" : false
+        },
+        "bq.csv.quote" : {
+          "displayName" : "CSV Input - Quote",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.quote",
+          "sensitive" : false
+        },
+        "bq.table.schema" : {
+          "displayName" : "Table Schema",
+          "identifiesControllerService" : false,
+          "name" : "bq.table.schema",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-name" : {
+          "displayName" : "HTTP Proxy Username",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-name",
+          "sensitive" : false
+        },
+        "bq.load.ignore_unknown" : {
+          "displayName" : "Ignore Unknown Values",
+          "identifiesControllerService" : false,
+          "name" : "bq.load.ignore_unknown",
+          "sensitive" : false
+        },
+        "gcp-project-id" : {
+          "displayName" : "Project ID",
+          "identifiesControllerService" : false,
+          "name" : "gcp-project-id",
+          "sensitive" : false
+        },
+        "GCP Credentials Provider Service" : {
+          "displayName" : "GCP Credentials Provider Service",
+          "identifiesControllerService" : true,
+          "name" : "GCP Credentials Provider Service",
+          "sensitive" : false
+        },
+        "bq.load.max_badrecords" : {
+          "displayName" : "Max Bad Records",
+          "identifiesControllerService" : false,
+          "name" : "bq.load.max_badrecords",
+          "sensitive" : false
+        },
+        "bq.csv.delimiter" : {
+          "displayName" : "CSV Input - Field Delimiter",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.delimiter",
+          "sensitive" : false
+        },
+        "bq.csv.skip.leading.rows" : {
+          "displayName" : "CSV Input - Skip Leading Rows",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.skip.leading.rows",
+          "sensitive" : false
+        },
+        "gcp-proxy-user-password" : {
+          "displayName" : "HTTP Proxy Password",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-user-password",
+          "sensitive" : false
+        },
+        "bq.csv.allow.jagged.rows" : {
+          "displayName" : "CSV Input - Allow Jagged Rows",
+          "identifiesControllerService" : false,
+          "name" : "bq.csv.allow.jagged.rows",
+          "sensitive" : false
+        },
+        "bq.dataset" : {
+          "displayName" : "Dataset",
+          "identifiesControllerService" : false,
+          "name" : "bq.dataset",
+          "sensitive" : false
+        },
+        "bq.load.write_disposition" : {
+          "displayName" : "Write Disposition",
+          "identifiesControllerService" : false,
+          "name" : "bq.load.write_disposition",
+          "sensitive" : false
+        },
+        "gcp-proxy-port" : {
+          "displayName" : "Proxy port",
+          "identifiesControllerService" : false,
+          "name" : "gcp-proxy-port",
+          "sensitive" : false
+        },
+        "bq.load.create_disposition" : {
+          "displayName" : "Create Disposition",
+          "identifiesControllerService" : false,
+          "name" : "bq.load.create_disposition",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.gcp.bigquery.PutBigQueryBatch",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.9.1"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "71211acf-e1ed-3484-be1a-03e68d1ade20",
+      "identifier" : "d265bb2d-6f7c-3dd4-ae7f-77e1b9585022",
+      "name" : "LogAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 914.9984936235924,
+        "y" : 237.00002851016416
+      },
+      "properties" : {
+        "character-set" : "windows-1252",
+        "Log Level" : "info",
+        "attributes-to-log-regex" : ".*",
+        "Log Payload" : "true"
+      },
+      "propertyDescriptors" : {
+        "Log prefix" : {
+          "displayName" : "Log prefix",
+          "identifiesControllerService" : false,
+          "name" : "Log prefix",
+          "sensitive" : false
+        },
+        "character-set" : {
+          "displayName" : "Character Set",
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "attributes-to-ignore-regex" : {
+          "displayName" : "Attributes to Ignore by Regular Expression",
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-ignore-regex",
+          "sensitive" : false
+        },
+        "Attributes to Ignore" : {
+          "displayName" : "Attributes to Ignore",
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore",
+          "sensitive" : false
+        },
+        "Attributes to Log" : {
+          "displayName" : "Attributes to Log",
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log",
+          "sensitive" : false
+        },
+        "attributes-to-log-regex" : {
+          "displayName" : "Attributes to Log by Regular Expression",
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-log-regex",
+          "sensitive" : false
+        },
+        "Log Payload" : {
+          "displayName" : "Log Payload",
+          "identifiesControllerService" : false,
+          "name" : "Log Payload",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
