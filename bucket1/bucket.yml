@@ -1,6 +1,7 @@
 flows:
   e787bc17-cf78-41e5-8bab-c8b80a347df2: {ver: 1, file: Get_files_To_Bigquery.snapshot}
   8672343e-3290-40cb-803e-74d73040f9d5: {ver: 1, file: File_to_Elasticsearch.snapshot}
+  3f4aef21-9507-4727-bf59-9bba9beda806: {ver: 1, file: Get_File_Bigquery.snapshot}
   1c2bf686-7b3a-492e-a076-1285c02bd87d: {ver: 1, file: Avro_to_Bigquery.snapshot}
   74354c4d-a915-4a1a-ba32-2eac4fd718df: {ver: 1, file: Test_Flow_Internet.snapshot}
   25ca6474-8194-40ad-8ede-01ff724e2dc4: {ver: 1, file: Test_github.snapshot}
